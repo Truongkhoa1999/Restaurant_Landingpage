@@ -1,0 +1,102 @@
+/** UNIVERSE SETTINGS**/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.banner {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(image/booking_background.jpg) center/cover no-repeat fixed;
+    /** center box**/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding-bottom: 20px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 420px 420px;
+    background: #ffffff;
+    height: 320px;
+}
+
+.card-img {
+    background: url(image/card_image.jpg) center/cover no-repeat;
+}
+
+.banner h2 {
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.card-content h2 {
+    text-align: center;
+    color: #f2745f;
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+
+/** format rows**/
+
+.form-row {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+form select,
+form input {
+    display: block;
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    /** box settings**/
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    font-weight: 300;
+}
+
+form input [type=text],
+form input[type=number],
+form input::placeholder,
+select {
+    /** book table color**/
+    color: grey;
+}
+
+form input[type=submit] {
+    color: white;
+    background: #f2745f;
+    padding: 12px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* button interaction*/
+
+form input[type=submit]:hover {
+    opacity: 0.9;
+}
+
+
+/** responsive**/
+
+@media(max-width: 992px) {
+    .card-container {
+        grid-template-columns: 100%;
+        width: 100vw;
+    }
+    .card-img {
+        height: 330px;
+    }
+}
