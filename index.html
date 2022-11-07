@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Web supports IE9/IE8-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Style link-->
+    <link rel="stylesheet" href="CSS/main_styles.css">
+
+    <link rel="stylesheet" href="CSS/foodFusion_styles.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <!--X-UA compitable-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Google Fonts link for free font-->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@700&display=swap" rel="stylesheet">
+    <!--Awesome link for free icon-->
+    <script src="https://kit.fontawesome.com/4cebf6e686.js" crossorigin="anonymous"></script>
+    <title>fine_Dinning</title>
+
+    <style>
+        /* style for Nav-bar*/
+        
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav {
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            right: 0;
+            top: 0;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0 5%;
+            height: 100px;
+            background-color: #000000;
+        }
+        
+        nav .logo {
+            float: left;
+            width: 40%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            color: #fff;
+        }
+        
+        nav .links {
+            float: right;
+            padding: 0;
+            margin: 0;
+            width: 60%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        nav .links li {
+            list-style: none;
+        }
+        
+        nav .links a {
+            display: block;
+            padding: 1em;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        #nav-toggle {
+            position: absolute;
+            top: -100px;
+        }
+        
+        nav .icon-burger {
+            display: none;
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        nav .icon-burger.line {
+            width: 30px;
+            height: 5px;
+            /** background-color: red;**/
+            margin: 5px;
+            border-radius: 3px;
+            transition: all .3s ease-in-out;
+        }
+        /**responsive**/
+        
+        @media screen and (max-width: 768px) {
+            nav .logo {
+                float: none;
+                width: auto;
+                justify-content: center;
+            }
+            nav .links {
+                float: none;
+                position: fixed;
+                z-index: 9;
+                left: 0;
+                right: 0;
+                top: 100px;
+                bottom: 100%;
+                width: auto;
+                height: auto;
+                flex-direction: column;
+                justify-content: space-evenly;
+                background-color: rgba(0, 0, 0, .8);
+                overflow: hidden;
+                box-sizing: border-box;
+                transition: all .5s ease-in-out;
+            }
+            nav .links a {
+                font-size: 20px;
+            }
+            nav :checked~.links {
+                bottom: 0;
+            }
+            nav .icon-burger {
+                display: block;
+            }
+            nav :checked~.icon-burger .line:nth-child(1) {
+                transform: translateY(10px) rotate(225deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--NavigationBar learn from CodingNepal-->
+    <nav>
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo">FINE<strong>DINNING</strong></div>
+        <ul class="links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="aboutUS.html">ABOUT</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="booking_table.html">BOOKING</a></li>
+            <li><a href="My_Ticket.html">MyTickets</a></li>
+
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+        <span  class="line" style="background-color: #ffffff;">_</span>
+        <span  class="line" style="background-color: #ffffff;">_</span>
+        <span class="line" style="background-color: #ffffff;">_</span>
+        </label>
+
+    </nav>
+
+    <!--Learn from Code-with-Erum in youtube-->
+    <!--Header-->
+    <header class="header">
+        <div class="booking">
+            <h1 class="title">FiNE DINNING</h1>
+            <a href="#" class="bookingButton pulsate">Reserve (a) tables</a>
+        </div>
+    </header>
+    <!--ABOUT US-->
+    <section id="about">
+        <div>
+            <h2 class="title-text" style="color: black;">ABOUT US</h2>
+            <p class="title-text2" style="color:black">
+                With 20 years of experience in the culinary industry, we ourselves have embraced cross- cultures to ensure a diverse food carpet. We offer eaters to enjoy different type of food via various theme table types. You can also customize the theme according
+                to your wishes. Make sure your selection is the most comfortable.
+            </p>
+        </div>
+        <div class="about-center">
+            <!--Article 1 starts here-->
+            <article class="about">
+                <div class="about-icon">
+                    <i class="fas fa-cocktail"></i></div>
+                <div class="about-text">
+                    <h2 class="about-subtitle">Beverages</h2>
+                    <p class="about-info" style="color: black;">
+                        Drinks included during the meal will be refilled. For a clear view of the basic drinks in the package, please pay attention to the table-type service. There will be an additional charge for private drinks buffet. Wine is the ultimate drink for every table
+                        type
+                    </p>
+                </div>
+            </article>
+            <!--Article 1 ends here-->
+            <!--Article 2 starts here-->
+            <article class="about">
+                <div class="about-icon">
+                    <i class="fas fa-utensils"></i></div>
+                <div class="about-text">
+                    <h2 class="about-subtitle"> Traditional food</h2>
+                    <p class="about-info" style="color: black;">
+                        Traditional foods to many cultures will depend on seasonal ingredients. However, we will guarantee their scarcity, as long as you follow the restaurant's navigational options. And if there are any changes to your mind or creativity in traditional dishes
+                        please notify us soon. We want to make sure your creativity and choices reflect the future meal well
+                    </p>
+                </div>
+            </article>
+
+            <!--Article 2 ends here-->
+            <!--Article 3 starts here-->
+            <article class="about">
+                <div class="about-icon">
+                    <i class="fas fa-ice-cream"></i></div>
+                <div class="about-text">
+                    <h2 class="about-subtitle">Dessert</h2>
+                    <p class="about-info" style="color: black;">
+                        Dessert is available on your table only when you decide to make an offer. That is, desserts can include fruit-based dishes. You should only order them 10 minutes before the main meal to ensure their freshness. However, choosing to enjoy desserts parallel
+                        with a main meal is not bad.
+                    </p>
+                </div>
+            </article>
+            <!--Article 3 ends here-->
+            <!--Article 4 starts here-->
+            <article class="about">
+                <div class="about-icon">
+                    <i class="fas fa-seedling"></i></div>
+                <div class="about-text">
+                    <h2 class="about-subtitle">Vegetarian meals</h2>
+                    <p class="about-info" style="color: black;">Diet is a method for good health. The way of using vegetarian dishes is also different from region to region. Please advise us about your wished ingredients for vegetarian food. We'll listen and advise on the essential ingredients
+                        in your meals to ensure nutrition and deliciousness.</p>
+                </div>
+            </article>
+            <!--Article 4 ends here-->
+
+            <!--Article 5 starts here-->
+            <article class="about">
+                <div class="about-icon">
+                    <i class="fas fa-cheese"></i></div>
+                <div class="about-text">
+                    <h2 class="about-subtitle">Cakes</h2>
+                    <p class="about-info" style="color: black;">
+                        Besides the cakes in the menu, you will feel free to choose a cake according to your style and preferences. Talk to the customer service department and reflect on the type of cake you want. We will take note.
+                    </p>
+                </div>
+            </article>
+            <!--Article 5 ends here-->
+
+            <!--Article 6 starts here-->
+            <article class="about">
+                <div class="about-icon">
+                    <i class="fas fa-taxi "></i></div>
+                <div class="about-text">
+                    <h2 class="about-subtitle">Services</h2>
+                    <p class="about-info" style="color: black;">Transportation services are completely free within 20km, entertainment services attached to meals will not be surcharged during fixed hours. If you want to specialize shows according to your private meal time, fee is required.</p>
+                </div>
+            </article>
+            <!--Article 6 ends here-->
+        </div>
+    </section>
+    <!--Social Icons-->
+    <section id="social-icons">
+        <h2 style="font-size: 0px;">n</h2>
+        <a href="#"><i class="fab fa-facebook facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram instagram"></i></a>
+        <a href="#"><i class="fab fa-google-plus plus"></i></a>
+    </section>
+    <!--Restaurant menu-->
+    <section class="menu" id="menu">
+        <h2 style="font-size: 0px;">n</h2>
+        <article class="menu-image">
+            <h2 style="font-size: 0px;">n</h2>
+        </article>
+        <article class="menu-text">
+            <div class="menu-text-center">
+                <h2 style="color: black;">Our Menu</h2>
+                <p style="color: black;">
+                    Our culinary heaven is diverse and neatly arranged in rows. Explore and create for you a creative combination.</p>
+                <a href="#">Explore</a>
+            </div>
+        </article>
+    </section>
+
+    <!--Tabe services-->
+    <section id="numbers">
+        <h2 style="font-size: 50px;">Learn more our services <br> -></h2>
+        <!--Type1-->
+        <article class="number">
+            <i class="fas fa-globe-americas"></i>
+            <p>American costume</p>
+            <h3>Table services</h3>
+        </article>
+        <!--Type2-->
+        <article class="number">
+            <i class="fas fa-globe-europe"></i>
+            <p>European costume</p>
+            <h3>Table services</h3>
+        </article>
+        <!--Type3-->
+        <article class="number">
+            <i class="fas fa-globe-asia"></i>
+            <p>Asian costume</p>
+            <h3>Table services</h3>
+        </article>
+        <!--Type4-->
+        <article class="number">
+            <i class="fas fa-concierge-bell "></i>
+            <p>Buffet</p>
+            <h3>Table services</h3>
+        </article>
+        <!--Type5-->
+        <article class="number">
+            <i class="fas fa-house-user"></i>
+            <p>Family</p>
+            <h3>Table services</h3>
+        </article>
+        <!--Type6-->
+        <article class="number">
+            <i class="fas fa-calendar-alt"></i>
+            <p>Event</p>
+            <h3>Table services</h3>
+        </article>
+        <!--Type7-->
+        <article class="number">
+            <i class="fas fa-guitar"></i>
+            <p>Music</p>
+            <h3>Demand services</h3>
+        </article>
+        <!--Type8-->
+        <article class="number">
+            <i class="fas fa-baby-carriage"></i>
+            <p>Babysitting</p>
+            <h3>Demand services</h3>
+        </article>
+        <!--Type9-->
+        <article class="number">
+            <i class="fas fa-shipping-fast"></i>
+            <p>Shipping</p>
+            <h3>Transport services</h3>
+        </article>
+        <!--Type10-->
+        <article class="number">
+            <i class="fas fa-taxi"></i>
+            <p>Taxi</p>
+            <h3>Transport services</h3>
+        </article>
+        <!--Type10-->
+        <article class="number">
+            <i class="fas fa-user-circle"></i>
+            <p>Advisory</p>
+            <h3>Customer services</h3>
+        </article>
+    </section>
+    <!--Food in a day-->
+    <section id="food">
+        <div>
+            <h2 class="title-text">Food Fusion</h2>
+        </div>
+        <div class="food-container">
+            <!--Fusion1-->
+            <article class="food-card">
+                <img src="CSS/image/breakfast.jpg" class="food-img" alt="breakfast">
+                <div class="img-text">
+                    <h2>Breakfast</h2>
+                </div>
+                <div class="img-footer">
+                    <div class="footer-icon">
+                        <i class="fas fa-dollar-sign">20</i>
+                    </div>
+                    <div class="footter-btn">
+                        <button type="button" class="food-btn">View</button>
+                    </div>
+                </div>
+            </article>
+            <!--Fusion3-->
+            <article class="food-card">
+                <img src="CSS/image/lunch.jpg" class="food-img" alt="lunch">
+                <div class="img-text">
+                    <h2>Lunch</h2>
+                </div>
+                <div class="img-footer">
+                    <div class="footer-icon">
+                        <i class="fas fa-dollar-sign">15</i>
+                    </div>
+                    <div class="footter-btn">
+                        <button type="button" class="food-btn">View</button>
+                    </div>
+                </div>
+            </article>
+            <!--Fusion2-->
+            <article class="food-card">
+                <img src="CSS/image/dinner.jpg" class="food-img" alt="dinner">
+                <div class="img-text">
+                    <h2>Dinner</h2>
+                </div>
+                <div class="img-footer">
+                    <div class="footer-icon">
+                        <i class="fas fa-dollar-sign">30</i>
+                    </div>
+                    <div class="footter-btn">
+                        <button type="button" class="food-btn">View</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!--Footer introduced by CodingNepal-->
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>ABOUT US</h2>
+                <div class="content">
+                    <p>Visit our
+                        <a href="#">Customer Serivces</a> <br> Visit our
+                        <a href="#">Advisory Serivces</a><br> Visit our
+                        <a href="#">Recruitment Department</a>
+                    </p>
+                    <div class="socia">
+                        <a href="#">
+                            <span class="fab fa-facebook"></span>
+                        </a>
+                        <a href="#">
+                            <span class="fab fa-twitter"></span>
+                        </a>
+                        <a href="#">
+                            <span class="fab fa-instagram"></span>
+                        </a>
+                        <a href="#">
+                            <span class="fab fa-google-plus"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center box">
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">1972 Fleur Estate, Tahoe Lake, Nevada, USA.</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+69 0123456789</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope-square"></span>
+                        <span class="text">FineDinning@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h2>CONTACT US</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text">Message *</div>
+                            <textarea rows="2" cols="25" required></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <center>
+                <span class="credit"> Footer created by <a href="https://www.youtube.com/watch?v=9l16a0jJeoE"> CodingNepal </a> </span> <br>
+                <span class="credit"> Nav-bar created by <a href="https://www.youtube.com/watch?v=mbDNrvKLAGM"> CodingNepal </a> </span> <br>
+                <span class="credit"> Responsive restaurant web created by <a href="https://www.youtube.com/watch?v=X9M81E4yh6A"> CodewithErum </a> </span> <br>
+                <span class="far fa-copyright"></span> <span>2020 All rights reserved.</span>
+            </center>
+        </div>
+    </footer>
+</body>
+
+</html>
